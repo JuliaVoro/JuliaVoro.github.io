@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trust and Trace</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <!-- orion icons-->
+    <link rel="stylesheet" href="css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/tablenew.css"
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png?3">
+
+    <!-- Tables-->
+  <!--   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/tables_b.css">
+    <link rel="stylesheet" type="text/css" href="../css/tablenew.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><a href="#" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead"><i class="fas fa-align-left"></i></a><a href="index.html" class="navbar-brand font-weight-bold text-uppercase text-base">Trust and Trace</a>
+        <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
+          <li class="nav-item">
+            <form id="searchForm" class="ml-auto d-none d-lg-block">
+              <div class="form-group position-relative mb-0">
+                <button type="submit" style="top: -3px; left: 0;" class="position-absolute bg-white border-0 p-0"><i class="o-search-magnify-1 text-gray text-lg"></i></button>
+                <input type="search" placeholder="Search ..." class="form-control form-control-sm border-0 no-shadow pl-4">
+              </div>
+            </form>
+          </li>
+          <li class="nav-item dropdown mr-3"><a id="notifications" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-gray-400 px-1"><i class="fa fa-bell"></i><span class="notification-icon"></span></a>
+            <div aria-labelledby="notifications" class="dropdown-menu"><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-violet text-white"><i class="fas fa-file-contract"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">You have 2 new certificates to confirm</p>
+                  </div>
+                </div></a><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-green text-white"><i class="far fa-id-card"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">You have 6 new suppliers</p>
+                  </div>
+                </div></a><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-blue text-white"><i class="fas fa-user-edit"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">Please update your infromat</p>
+                  </div>
+                </div></a><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-violet text-white"><i class="fas fa-file-contract"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">You have 2 outdated certificates</p>
+                  </div>
+                </div></a>
+              <div class="dropdown-divider"></div><a href="#" class="dropdown-item text-center"><small class="font-weight-bold headings-font-family text-uppercase">View all notifications</small></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown ml-auto"><a id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><img src="http://i64.tinypic.com/2enolk5.png" alt="Jason Doe" style="max-width: 2.5rem;" class="img-fluid rounded-circle shadow"></a>
+            <div aria-labelledby="userInfo" class="dropdown-menu"><a href="#" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Sandra Costa</strong><small>Triwool</small></a>
+              <div class="dropdown-divider"></div><a href="#" class="dropdown-item">Settings</a><a href="#" class="dropdown-item">Activity log       </a>
+              <div class="dropdown-divider"></div><a href="login.html" class="dropdown-item">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+      <div id="sidebar" class="sidebar py-3">
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
+        <ul class="sidebar-menu list-unstyled">
+              <li class="sidebar-list-item"><a href="index.html" class="sidebar-link text-muted active"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
+              <li class="sidebar-list-item"><a href="charts.html" class="sidebar-link text-muted"><i class="fas fa-globe-americas mr-3 text-gray"></i><span>Trace</span></a></li>
+
+              <li class="sidebar-list-item"><a href="forms.html" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Orders</span></a></li>
+          <li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted"><i class="fas fa-users mr-3 text-gray"></i><span>Suppliers</span></a>
+            <div id="pages" class="collapse">
+              <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Tier 1</a></li>
+                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Tear 2</a></li>
+                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Tear 3</a></li>
+                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Tear 4</a></li>
+              </ul>
+            </div>
+          </li>
+              <li class="sidebar-list-item"><a href="login.html" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Login</span></a></li>
+        </ul>
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">Data</div>
+        <ul class="sidebar-menu list-unstyled">
+              <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="fas fa-tint mr-3 text-gray"></i><span>H2O</span></a></li>
+              <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="fas fa-file-contract  mr-3 text-gray"></i><span>CO2</span></a></li>
+              <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="fas fa-certificate mr-3 text-gray"></i><span>Certificates</span></a></li>
+              <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="fas fa-recycle mr-3 text-gray"></i><span>Recycling</span></a></li>
+        </ul>
+      </div>
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
+          <section class="py-5">
+            <table id="example" class="table table-striped table-bordered" style="width:100%">
+                     <thead>
+                         <tr>
+                             <th>Supplier</th>
+                             <th>Stage</th>
+                             <th>Ranking</th>
+                             <th>Production Capacity</th>
+                             <th>Compliancee</th>
+                             <th>Contact</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td><a href="just copy this line next fields suppliers name">Triwool<a></td>
+                             <td>Tier1, design</td>
+                             <td>10</td>
+                             <td>6 design per day</td>
+                             <td>100%</td>
+                             <td>info@triwool.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">ATB </a></td>
+                             <td>dyeing</td>
+                             <td>9.8</td>
+                             <td>1 Ton per month</td>
+                             <td>100%</td>
+                             <td>Info@atb.pt</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Etevimol </a></td>
+                             <td>Fabric Producer</td>
+                             <td>9.5</td>
+                             <td>1 Ton per day</td>
+                             <td>95%</td>
+                             <td>info@etevimol.pt</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Tearfil </a></td>
+                             <td>Yarn producer</td>
+                             <td>9.6</td>
+                             <td>3 tons per day</td>
+                             <td>98%</td>
+                             <td>info@tearfil.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Folte </a></td>
+                             <td>Patterning</td>
+                             <td>8.9</td>
+                             <td>1 Ton per day</td>
+                             <td>99%</td>
+                             <td>info@folte.pt</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Cotton Kingdom </a></td>
+                             <td>Raw material</td>
+                             <td>10</td>
+                             <td>5 Tons per day</td>
+                             <td>100%</td>
+                             <td>info@Cottonkingdom.uk</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Usbital </a></td>
+                             <td>Raw Material</td>
+                             <td>7.8</td>
+                             <td>2 tons per day</td>
+                             <td>78%</td>
+                             <td>info@usbital.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Arifil </a></td>
+                             <td>Yarn Producer</td>
+                             <td>8.8</td>
+                             <td>2 tons per day</td>
+                             <td>80%</td>
+                             <td>info@arifil.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Collen Hurst </a></td>
+                             <td>Patterning</td>
+                             <td>7.8</td>
+                             <td>1 tons per day</td>
+                             <td>82%</td>
+                             <td>info@collen.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Frost </a></td>
+                             <td>Dyeing</td>
+                             <td>6.5</td>
+                             <td>1 tons per day</td>
+                             <td>76%</td>
+                             <td>info@frost.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Jena Gaines </a></td>
+                             <td>raw materila</td>
+                             <td>9.5</td>
+                             <td>1 tons per day</td>
+                             <td>95%</td>
+                             <td>info@gaiens.co</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Totto </a></td>
+                             <td>Fabric producer</td>
+                             <td>9.5</td>
+                             <td>2 tons per day</td>
+                             <td>100%</td>
+                             <td>info@totto.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Marshall </a></td>
+                             <td>Fabric Producer</td>
+                             <td>8.7</td>
+                             <td>3 tons per day</td>
+                             <td>100%</td>
+                             <td>info@marshall.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Kingdom </a></td>
+                             <td>Yarn Producer</td>
+                             <td>9.2</td>
+                             <td>6 tons per day</td>
+                             <td>97%</td>
+                             <td>info@kingdom.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Fitzpatrick </a></td>
+                             <td>Dyeing</td>
+                             <td>8.9</td>
+                             <td>1 ton per day</td>
+                             <td>79%</td>
+                             <td>info@fp.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Silva </a></td>
+                             <td>Tier 1, design</td>
+                             <td>7.5</td>
+                             <td>5 design per day</td>
+                             <td>88%</td>
+                             <td>info@silva.es</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Hilarius Ferro </a></td>
+                             <td>Yarn producer</td>
+                             <td>9.5</td>
+                             <td>2 tons per day</td>
+                             <td>100%</td>
+                             <td>info@ferro.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Gloria </a></td>
+                             <td>Dyeing</td>
+                             <td>9.6</td>
+                             <td>2 tons per day</td>
+                             <td>95%</td>
+                             <td>info@gloria.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Vorobioba </a></td>
+                             <td>Patterning</td>
+                             <td>10</td>
+                             <td>2 tons per day</td>
+                             <td>100%</td>
+                             <td>info@vorobioba.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Betti </a></td>
+                             <td>Yarn Producer</td>
+                             <td>10</td>
+                             <td>3 tons per day</td>
+                             <td>100%</td>
+                             <td>info@betti.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Caldwell </a></td>
+                             <td>Garment Producer</td>
+                             <td>9.8</td>
+                             <td>5 tons per day</td>
+                             <td>99%</td>
+                             <td>info@caldwell.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Berry </a></td>
+                             <td>Raw Material</td>
+                             <td>8.9</td>
+                             <td>3 tons per day</td>
+                             <td>85%</td>
+                             <td>info@berry.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Caesar Vance </a></td>
+                             <td>Tier 1, design</td>
+                             <td>9.8</td>
+                             <td>6 design per day</td>
+                             <td>98%</td>
+                             <td>info@cv.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Redzick</a></td>
+                             <td>Fabric Producer</td>
+                             <td>10</td>
+                             <td>2 tons per day</td>
+                             <td>100%</td>
+                             <td>info@redzik.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Mosso </a></td>
+                             <td>Yarn Producer</td>
+                             <td>10</td>
+                             <td>2 tons per day</td>
+                             <td>100%</td>
+                             <td>info@mosso.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Gavin Joice </a></td>
+                             <td>Garment Producer</td>
+                             <td>9.2</td>
+                             <td>5 tons per day</td>
+                             <td>96%</td>
+                             <td>info@gj.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Petra </a></td>
+                             <td>Raw Material</td>
+                             <td>5.9</td>
+                             <td>2 tons per day</td>
+                             <td>60%</td>
+                             <td>info@petra.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Brenden Wegner </a></td>
+                             <td>Fabric Producer</td>
+                             <td>7.6</td>
+                             <td>1 ton per day</td>
+                             <td>81%</td>
+                             <td>info@BW.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Fiona </a></td>
+                             <td>Garment Producer</td>
+                             <td>8.2</td>
+                             <td>1 ton per day</td>
+                             <td>88%</td>
+                             <td>info@fionaindustry.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Malaver </a></td>
+                             <td>Dyeing</td>
+                             <td>10</td>
+                             <td>4 tons per day</td>
+                             <td>100%</td>
+                             <td>info@malaver.co</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Montarte </a></td>
+                             <td>Garment Producer</td>
+                             <td>4.5</td>
+                             <td>2 tons per day</td>
+                             <td>85%</td>
+                             <td>info@montarte.co</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">calzetoni </a></td>
+                             <td>Patterning</td>
+                             <td>4.9</td>
+                             <td>1 ton per day</td>
+                             <td>91%</td>
+                             <td>info@calzetoni.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Indra </a></td>
+                             <td>Tier 1, design</td>
+                             <td>8.9</td>
+                             <td>3 design per day</td>
+                             <td>89%</td>
+                             <td>info@indra.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Gavin Cortes </a></td>
+                             <td>Garment Produecr</td>
+                             <td>7.5</td>
+                             <td>3 tons per day</td>
+                             <td>100%</td>
+                             <td>info@GC.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Mccray </a></td>
+                             <td>Patterning</td>
+                             <td>5.8</td>
+                             <td>4 tons per day</td>
+                             <td>100%</td>
+                             <td>info@Mccray.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Unity Butler </a></td>
+                             <td>Yarn Producer</td>
+                             <td>6.8</td>
+                             <td>2 tons per day</td>
+                             <td>85%</td>
+                             <td>info@UB.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Howard Hatfield </a></td>
+                             <td> Raw material</td>
+                             <td>8.9</td>
+                             <td>2 tons per day</td>
+                             <td>79%</td>
+                             <td>info@hh.uk</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Alethia </a></td>
+                             <td>Garment Producer</td>
+                             <td>9.2</td>
+                             <td>1 ton per day</td>
+                             <td>95%</td>
+                             <td>info@alethia.mx</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Harrel </a></td>
+                             <td>Dyeing</td>
+                             <td>7.8</td>
+                             <td>5 tons per day</td>
+                             <td>98%</td>
+                             <td>info@harrel.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Timmoty money </a></td>
+                             <td>Garmen Producer</td>
+                             <td>3.9</td>
+                             <td>1 ton per day</td>
+                             <td>88%</td>
+                             <td>info@tm.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Fisher </a></td>
+                             <td> Raw material</td>
+                             <td>8.3</td>
+                             <td>4 ton per day</td>
+                             <td>76%</td>
+                             <td>info@fisher.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Oliva </a></td>
+                             <td>Fabric Producer</td>
+                             <td>9.8</td>
+                             <td>3 tons per day</td>
+                             <td>91%</td>
+                             <td>info@oliva.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Bruno Nash </a></td>
+                             <td>Fabric Producer</td>
+                             <td>5.9</td>
+                             <td>2 tons per day</td>
+                             <td>81%</td>
+                             <td>info@BN.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Yamamoto </a></td>
+                             <td>Garment Producer</td>
+                             <td>7.7</td>
+                             <td>2 tons per day</td>
+                             <td>87%</td>
+                             <td>info@yamamoto.jp</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Thor </a></td>
+                             <td>Dyeing</td>
+                             <td>6.9</td>
+                             <td>2 tons per day</td>
+                             <td>100%</td>
+                             <td>info@thor.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Prezo </a></td>
+                             <td>Yarn producer</td>
+                             <td>7.9</td>
+                             <td>4 tons per day</td>
+                             <td>54%</td>
+                             <td>info@prezo.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Baldwin </a></td>
+                             <td>Patterning</td>
+                             <td>7.6</td>
+                             <td>2 tons per day</td>
+                             <td>76%</td>
+                             <td>info@baldwin.com</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Gruzel </a></td>
+                             <td>Tier1, design</td>
+                             <td>7.9</td>
+                             <td>4 designs per day</td>
+                             <td>96%</td>
+                             <td>info@gruzel.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Palanga </a></td>
+                             <td>Dyeing</td>
+                             <td>7.4</td>
+                             <td>2 tons per day</td>
+                             <td>92%</td>
+                             <td>info@palanga.lt</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">Lara Isaac</a></td>
+                             <td>Garment Producer</td>
+                             <td>8.4</td>
+                             <td>1 ton per day</td>
+                             <td>100%</td>
+                             <td>info@li.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">DDR </a></td>
+                             <td>Dyeing</td>
+                             <td>5.8</td>
+                             <td>2 tons per day</td>
+                             <td>93%</td>
+                             <td>info@ddr.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Hermione </a></td>
+                             <td>Yarn Producer</td>
+                             <td>5.9</td>
+                             <td>1 ton per day</td>
+                             <td>86%</td>
+                             <td>info@hermione.com.us</td>
+                         </tr>
+                         <tr>
+                            <td><a href="link">lael Grear </a></td>
+                             <td>Yarn producer</td>
+                             <td>10</td>
+                             <td>2 tons er day</td>
+                             <td>100%</td>
+                             <td>info@lg.com.it</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Craziva Jiah </a></td>
+                             <td>Garment producer</td>
+                             <td>6.9</td>
+                             <td>3 tons per day</td>
+                             <td>93%</td>
+                             <td>info@cj.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Battara jar </a></td>
+                             <td>Yarn producer</td>
+                             <td>9.6</td>
+                             <td>1 ton per day</td>
+                             <td>99%</td>
+                             <td>info@bj.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Praget </a></td>
+                             <td>Yarn producer</td>
+                             <td>5.5</td>
+                             <td>1 ton per day</td>
+                             <td>85%</td>
+                             <td>info@prget.com</td>
+                         </tr>
+                         <tr>
+                             <td><a href="link">Donna Snider </a></td>
+                             <td>Raw material</td>
+                             <td>7.9</td>
+                             <td>4 tons per day</td>
+                             <td>57%</td>
+                             <td>info@ds.com</td>
+                         </tr>
+                     </tbody>
+                     <tfoot>
+                         <tr>
+                             <th>Supplier</th>
+                             <th>Stage</th>
+                             <th>Ranking</th>
+                             <th>Production Capacity</th>
+                             <th>Compliance</th>
+                             <th>Contact</th>
+                         </tr>
+                     </tfoot>
+                 </table>
+               </div>
+    <table id="example" class="display" width="100%"></table>
+        <div class="col-lg-11 mb-4">
+          <div class="container">
+        <table id="example" class="display" style="padding:10px; weight:120"></table></div> </div>
+        <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-left text-primary">
+                <p class="mb-2 mb-md-0">Your company &copy; 2018-2020</p>
+              </div>
+              <div class="col-md-6 text-center text-md-right text-gray-400">
+                <p class="mb-0">Design by <a href="https://bootstrapious.com/admin-templates" class="external text-gray-400">Bootstrapious</a></p>
+                <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="js/front.js"></script>
+    <script "text/javascript" charset="utf8" src="js/table.js"></script>
+    <script "text/javascript" charset="utf8" src= "https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script "text/javascript" charset="utf8" src= "https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script "text/javascript" charset="utf8" src= "https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+  </body>
+</html>

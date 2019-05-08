@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trust and Trace</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <!-- orion icons-->
+    <link rel="stylesheet" href="css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/tablenew.css"
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png?3">
+
+    <!-- Tables-->
+  <!--   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/tables_b.css">
+    <link rel="stylesheet" type="text/css" href="../css/tablenew.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><a href="#" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead"><i class="fas fa-align-left"></i></a><a href="index.html" class="navbar-brand font-weight-bold text-uppercase text-base">Trust and Trace</a>
+        <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
+          <li class="nav-item">
+            <form id="searchForm" class="ml-auto d-none d-lg-block">
+              <div class="form-group position-relative mb-0">
+                <button type="submit" style="top: -3px; left: 0;" class="position-absolute bg-white border-0 p-0"><i class="o-search-magnify-1 text-gray text-lg"></i></button>
+                <input type="search" placeholder="Search ..." class="form-control form-control-sm border-0 no-shadow pl-4">
+              </div>
+            </form>
+          </li>
+          <li class="nav-item dropdown mr-3"><a id="notifications" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-gray-400 px-1"><i class="fa fa-bell"></i><span class="notification-icon"></span></a>
+            <div aria-labelledby="notifications" class="dropdown-menu"><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-violet text-white"><i class="fas fa-file-contract"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">You have 2 new certificates to confirm</p>
+                  </div>
+                </div></a><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-green text-white"><i class="far fa-id-card"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">You have 6 new suppliers</p>
+                  </div>
+                </div></a><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-blue text-white"><i class="fas fa-user-edit"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">Please update your infromat</p>
+                  </div>
+                </div></a><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-violet text-white"><i class="fas fa-file-contract"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">You have 2 outdated certificates</p>
+                  </div>
+                </div></a>
+              <div class="dropdown-divider"></div><a href="#" class="dropdown-item text-center"><small class="font-weight-bold headings-font-family text-uppercase">View all notifications</small></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown ml-auto"><a id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><img src="http://i64.tinypic.com/2enolk5.png" alt="Jason Doe" style="max-width: 2.5rem;" class="img-fluid rounded-circle shadow"></a>
+            <div aria-labelledby="userInfo" class="dropdown-menu"><a href="#" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Sandra Costa</strong><small>Triwool</small></a>
+              <div class="dropdown-divider"></div><a href="#" class="dropdown-item">Settings</a><a href="#" class="dropdown-item">Activity log       </a>
+              <div class="dropdown-divider"></div><a href="login.html" class="dropdown-item">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+      <div id="sidebar" class="sidebar py-3">
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
+        <ul class="sidebar-menu list-unstyled">
+              <li class="sidebar-list-item"><a href="index.html" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
+              <li class="sidebar-list-item"><a href="charts.html" class="sidebar-link text-muted"><i class="fas fa-globe-americas mr-3 text-gray"></i><span>Trace</span></a></li>
+
+              <li class="sidebar-list-item"><a href="forms.html" class="sidebar-link text-muted active"><i class="o-survey-1 mr-3 text-gray"></i><span>Orders</span></a></li>
+          <li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted"><i class="fas fa-users mr-3 text-gray"></i><span>Suppliers</span></a>
+            <div id="pages" class="collapse">
+              <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Tier 1</a></li>
+                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Tear 2</a></li>
+                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Tear 3</a></li>
+                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Tear 4</a></li>
+              </ul>
+            </div>
+          </li>
+              <li class="sidebar-list-item"><a href="login.html" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Login</span></a></li>
+        </ul>
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">Data</div>
+        <ul class="sidebar-menu list-unstyled">
+              <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="fas fa-tint mr-3 text-gray"></i><span>H2O</span></a></li>
+              <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="fas fa-file-contract  mr-3 text-gray"></i><span>CO2</span></a></li>
+              <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="fas fa-certificate mr-3 text-gray"></i><span>Certificates</span></a></li>
+              <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="fas fa-recycle mr-3 text-gray"></i><span>Recycling</span></a></li>
+        </ul>
+      </div>
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
+          <section class="py-5">
+            <table id="example" class="table table-striped table-bordered" style="width:100%">
+                      <thead>
+                          <tr>
+                              <th>Order Number</th>
+                              <th>Description</th>
+                              <th>Client</th>
+                              <th>Quantity</th>
+                              <th>Date</th>
+                              <th>Order Status</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td><a href="just copy this line next fields of order N">#192929<a></td>
+                              <td>t-shirt</td>
+                              <td>Zara</td>
+                              <td>2000</td>
+                              <td>2020/04/25</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#231321</a></td>
+                              <td>short</td>
+                              <td>Zara</td>
+                              <td>1500</td>
+                              <td>2011/07/25</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                               <td><a href="link">#231546</a></td>
+                              <td>cardigan</td>
+                              <td>Berska</td>
+                              <td>3000</td>
+                              <td>2009/01/12</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                               <td><a href="link">#134567</a></td>
+                              <td>dress</td>
+                              <td>Zara</td>
+                              <td>2000</td>
+                              <td>2012/03/29</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#321544</a></td>
+                              <td>coat</td>
+                              <td>United colors of benetton</td>
+                              <td>1000</td>
+                              <td>2008/11/28</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                               <td><a href="link">#231324</a></td>
+                              <td>shirt </td>
+                              <td>Zara</td>
+                              <td>3000</td>
+                              <td>2012/12/02</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#321546</a></td>
+                              <td>dress</td>
+                              <td>Berska</td>
+                              <td>1500</td>
+                              <td>2012/08/06</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#321346</a></td>
+                              <td>dress</td>
+                              <td>Berska</td>
+                              <td>2500</td>
+                              <td>2010/10/14</td>
+                              <td>Cancel</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#3465321</a></td>
+                              <td>Jacket</td>
+                              <td>Zara</td>
+                              <td>4000</td>
+                              <td>2009/09/15</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#223146</a></td>
+                              <td>t-shirt</td>
+                              <td>United colors of benetton</td>
+                              <td>2000</td>
+                              <td>2008/12/13</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#321465</a></td>
+                              <td>dress</td>
+                              <td>united colors of benetton</td>
+                              <td>1000</td>
+                              <td>2008/12/19</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#265467</a></td>
+                              <td>Coat</td>
+                              <td>Zara</td>
+                              <td>1500</td>
+                              <td>2013/03/03</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#232146</a></td>
+                              <td>jacket</td>
+                              <td>Zara</td>
+                              <td>2000</td>
+                              <td>2008/10/16</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#125479</a></td>
+                              <td>short</td>
+                              <td>Berska</td>
+                              <td>3500</td>
+                              <td>2012/12/18</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#231454</a></td>
+                              <td>dress</td>
+                              <td>Zara</td>
+                              <td>1500</td>
+                              <td>2010/03/17</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#546892</a></td>
+                              <td>cardigan</td>
+                              <td>Zara</td>
+                              <td>1800</td>
+                              <td>2012/11/27</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#231464</a></td>
+                              <td>t-shirt</td>
+                              <td>United colors of benetton</td>
+                              <td>3000</td>
+                              <td>2010/06/09</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#001234</a></td>
+                              <td>shirt</td>
+                              <td>Zara</td>
+                              <td>3500</td>
+                              <td>2009/04/10</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#031654</a></td>
+                              <td>coat</td>
+                              <td>Berska</td>
+                              <td>1500</td>
+                              <td>2012/10/13</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#032465</a></td>
+                              <td>t-shirt</td>
+                              <td>Zara</td>
+                              <td>2000</td>
+                              <td>2012/09/26</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#000134</a></td>
+                              <td>dress</td>
+                              <td>United colors of benetton</td>
+                              <td>1500</td>
+                              <td>2011/09/03</td>
+                              <td>complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#231324</a></td>
+                              <td>cardigan</td>
+                              <td>Zara</td>
+                              <td>1600</td>
+                              <td>2009/06/25</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#000137</a></td>
+                              <td>shirt</td>
+                              <td>Zara</td>
+                              <td>4000</td>
+                              <td>2011/12/12</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#002349</a></td>
+                              <td>coat</td>
+                              <td>Berska</td>
+                              <td>1900</td>
+                              <td>2010/09/20</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#003347</a></td>
+                              <td>jacket</td>
+                              <td>Zara</td>
+                              <td>3000</td>
+                              <td>2009/10/09</td>
+                              <td>Cancel</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#365497</a></td>
+                              <td>cardigan</td>
+                              <td>United colors of benetton</td>
+                              <td>4000</td>
+                              <td>2010/12/22</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#456212</a></td>
+                              <td>t-shirt</td>
+                              <td>Zara</td>
+                              <td>4000</td>
+                              <td>2010/11/14</td>
+                              <td>Completed</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#003254</a></td>
+                              <td>jacket</td>
+                              <td>United colors of benetton</td>
+                              <td>1500</td>
+                              <td>2011/06/07</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#002368</a></td>
+                              <td>t-shirt</td>
+                              <td>Berska</td>
+                              <td>1500</td>
+                              <td>2010/03/11</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#000002</a></td>
+                              <td>shirt</td>
+                              <td>Zara</td>
+                              <td>6000</td>
+                              <td>2011/08/14</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#003247</a></td>
+                              <td>short</td>
+                              <td>Zara</td>
+                              <td>4000</td>
+                              <td>2011/06/02</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#000316</a></td>
+                              <td>coar</td>
+                              <td>United colors of benetton</td>
+                              <td>1000</td>
+                              <td>2009/10/22</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#654972</a></td>
+                              <td>shirt</td>
+                              <td>Zara</td>
+                              <td>2000</td>
+                              <td>2011/05/07</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#032567</a></td>
+                              <td>dress</td>
+                              <td>Berska</td>
+                              <td>2000</td>
+                              <td>2008/10/26</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#002567</a></td>
+                              <td>t-shirt</td>
+                              <td>Zara</td>
+                              <td>3000</td>
+                              <td>2011/03/09</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#132424</a></td>
+                              <td>dress</td>
+                              <td>Zara</td>
+                              <td>5000</td>
+                              <td>2009/12/09</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#032105</a></td>
+                              <td>coat</td>
+                              <td>Zara</td>
+                              <td>2500</td>
+                              <td>2008/12/16</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#200024</a></td>
+                              <td>jacket</td>
+                              <td>Zara</td>
+                              <td>2000</td>
+                              <td>2010/02/12</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#003249</a></td>
+                              <td>320041</td>
+                              <td>United colors of benetton</td>
+                              <td>3000</td>
+                              <td>2009/02/14</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#032146</a></td>
+                              <td>shirt</td>
+                              <td>Berska</td>
+                              <td>2100</td>
+                              <td>2008/12/11</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#003021</a></td>
+                              <td>jacket</td>
+                              <td>Berska</td>
+                              <td>1500</td>
+                              <td>2008/09/26</td>
+                              <td>Pending</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#000024</a></td>
+                              <td>dress</td>
+                              <td>Zara</td>
+                              <td>1900</td>
+                              <td>2011/02/03</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#230000</a></td>
+                              <td>t-shirt</td>
+                              <td>United colors of benetton</td>
+                              <td>2000</td>
+                              <td>2011/05/03</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#003210</a></td>
+                              <td>t-shirt</td>
+                              <td>Zara</td>
+                              <td>4000</td>
+                              <td>2009/08/19</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#002310</a></td>
+                              <td>dress</td>
+                              <td>Zara</td>
+                              <td>2000</td>
+                              <td>2013/08/11</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#010101</a></td>
+                              <td>jacket</td>
+                              <td>Berska</td>
+                              <td>1000</td>
+                              <td>2009/07/07</td>
+                              <td>Complete</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#030205</a></td>
+                              <td>t-shirt</td>
+                              <td>Zara</td>
+                              <td>4000</td>
+                              <td>2012/04/09</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#010202</a></td>
+                              <td>short</td>
+                              <td>Zara</td>
+                              <td>5000</td>
+                              <td>2010/01/04</td>
+                              <td>Cancel</td>
+                          </tr>
+                          <tr>
+                              <td><a href="link">#020340</a></td>
+                              <td>coat</td>
+                              <td>Zara</td>
+                              <td>3000</td>
+                              <td>2012/06/01</td>
+                              <td>Created</td>
+                          </tr>
+                          <tr>
+                             <td><a href="link">#110300</a></td>
+                              <td>t-shirt</td>
+                              <td>United colors of benetton</td>
+                              <td>1800</td>
+                              <td>2013/02/01</td>
+                              <td>Created</td>
+                          </tr>
+
+                          </tr>
+                      </tbody>
+                      <tfoot>
+                          <tr>
+                              <th>Order Number</th>
+                              <th>Description</th>
+                              <th>Client</th>
+                              <th>Quantity</th>
+                              <th>Date</th>
+                              <th>Order status</th>
+                          </tr>
+                      </tfoot>
+                  </table>
+               </div>
+    <table id="example" class="display" width="100%"></table>
+        <div class="col-lg-11 mb-4">
+          <div class="container">
+        <table id="example" class="display" style="padding:10px; weight:120"></table></div> </div>
+
+        <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-left text-primary">
+                <p class="mb-2 mb-md-0">Triwool | Trust and Trace &copy; 2019-2020</p>
+              </div>
+              <div class="col-md-6 text-center text-md-right text-gray-400">
+                <p class="mb-0">Design by <a href="https://" class="external text-gray-400">Sugar </a></p>
+
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="js/front.js"></script>
+    <script "text/javascript" charset="utf8" src="js/table.js"></script>
+    <script "text/javascript" charset="utf8" src= "https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script "text/javascript" charset="utf8" src= "https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script "text/javascript" charset="utf8" src= "https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+  </body>
+</html>
