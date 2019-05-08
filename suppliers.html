@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.violet.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.png?3">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -53,7 +54,7 @@
                   </div>
                 </div></a><a href="#" class="dropdown-item">
                 <div class="d-flex align-items-center">
-                  <div class="icon icon-sm bg-blue text-white"><i class="fas fa-user-edit"></i></div>
+                  <div class="icon icon-sm bg-red text-white"><i class="fas fa-user-edit"></i></div>
                   <div class="text ml-2">
                     <p class="mb-0">Please update your infromat</p>
                   </div>
@@ -80,13 +81,14 @@
       <div id="sidebar" class="sidebar py-3">
         <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
         <ul class="sidebar-menu list-unstyled">
-              <li class="sidebar-list-item"><a href="index.html" class="sidebar-link text-muted active"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
-              <li class="sidebar-list-item"><a href="index.html" class="sidebar-link text-muted"><i class="fas fa-globe-americas mr-3 text-gray"></i><span>Trace</span></a></li>
+              <li class="sidebar-list-item"><a href="index.html" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
+              <li class="sidebar-list-item"><a href="suppliers.html" class="sidebar-link text-muted"><i class="fas fa-globe-americas mr-3 text-gray"></i><span>Trace</span></a></li>
 
-              <li class="sidebar-list-item"><a href="charts_order.html" class="sidebar-link text-muted "><i class="o-survey-1 mr-3 text-gray"></i><span>Orders</span></a></li>
-                <li class="sidebar-list-item"><a href="suppliers.html" class="sidebar-link text-muted"><i class="fas fa-users mr-3 text-gray"></i><span>Suppliers</span></a></li>
+              <li class="sidebar-list-item"><a href="charts_order.html" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Orders</span></a></li>
+              <li class="sidebar-list-item"><a href="suppliers.html" class="sidebar-link text-muted active"><i class="fas fa-users mr-3 text-gray"></i><span>Suppliers</a></li>
 
 
+          </li>
               <li class="sidebar-list-item"><a href="login.html" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Login</span></a></li>
         </ul>
         <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">Data</div>
@@ -97,187 +99,80 @@
               <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="fas fa-recycle mr-3 text-gray"></i><span>Recycling</span></a></li>
         </ul>
       </div>
+
+
+
       <div class="page-holder w-100 d-flex flex-wrap">
         <div class="container-fluid px-xl-5">
+
           <section class="py-5">
+
             <div class="row">
+            <div class="col-xl-3 col-lg-6 mb-4 mb-xl-0">
+              <a href="add_supplier.html">    <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
+                  <div class="flex-grow-1 d-flex align-items-center">
+                    <div class="dot mr-3 bg-violet"></div>
+                    <div class="text">
+                    <h7 class="mb-0">Add New Supplier</h7><span class="text-gray"></span></a>
+                    </div>
+                  </div>
+                  <div class="icon text-white bg-violet"><i class="fas fa-folder-plus"></i></div>
+                </div>
+              </div>
               <div class="col-xl-3 col-lg-6 mb-4 mb-xl-0">
+                  <a href="tablesuppliers.html">
                 <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
                   <div class="flex-grow-1 d-flex align-items-center">
                     <div class="dot mr-3 bg-violet"></div>
                     <div class="text">
-                      <h6 class="mb-0">New Suppliers</h6><span class="text-gray">14</span>
+                      <h7 class="mb-0">New Suppliers</h7><span class="text-gray"></span></a>
                     </div>
                   </div>
-                  <div class="icon text-white bg-violet"><i class="fas fa-server"></i></div>
+                  <div class="icon text-white bg-violet"><i class="far fa-copy"></i></div>
                 </div>
               </div>
               <div class="col-xl-3 col-lg-6 mb-4 mb-xl-0">
+                  <a href="tablesuppliers.html">
                 <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
                   <div class="flex-grow-1 d-flex align-items-center">
-                    <div class="dot mr-3 bg-green"></div>
+                    <div class="dot mr-3 bg-violet"></div>
                     <div class="text">
-                      <h6 class="mb-0">New Orders</h6><span class="text-gray">32</span>
+                      <h7 class="mb-0">All Suppliers</h7><span class="text-gray"></span></a>
                     </div>
                   </div>
-                  <div class="icon text-white bg-green"><i class="far fa-clipboard"></i></div>
+                  <div class="icon text-white bg-violet"><i class="far fa-folder-open"></i></div>
                 </div>
               </div>
               <div class="col-xl-3 col-lg-6 mb-4 mb-xl-0">
+                  <a href="tablesuppliers.html">
                 <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
                   <div class="flex-grow-1 d-flex align-items-center">
-                    <div class="dot mr-3 bg-blue"></div>
+                    <div class="dot mr-3 bg-violet"></div>
                     <div class="text">
-                      <h6 class="mb-0">Work Orders</h6><span class="text-gray">400</span>
+                      <h7 class="mb-0">Expiring certificates </h7><span class="text-gray"></span></a>
                     </div>
                   </div>
-                  <div class="icon text-white bg-blue"><i class="fa fa-dolly-flatbed"></i></div>
+                  <div class="icon text-white bg-violet"><i class="fas fa-receipt"></i></div>
                 </div>
               </div>
-              <div class="col-xl-3 col-lg-6 mb-4 mb-xl-0">
-                <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
-                  <div class="flex-grow-1 d-flex align-items-center">
-                    <div class="dot mr-3 bg-red"></div>
-                    <div class="text">
-                      <h6 class="mb-0">Argent Orders</h6><span class="text-gray">123</span>
-                    </div>
-                  </div>
-                  <div class="icon text-white bg-red"><i class="fas fa-receipt"></i></div>
-                </div>
-              </div>
+            </div>
             </div>
           </section>
-          <section>
-            <div class="row mb-4">
-              <div class="col-lg-7 mb-4 mb-lg-0">
-                <div class="card">
-                  <div class="card-header">
-                    <h2 class="h6 text-uppercase mb-0">Current environmental performance</h2>
-                  </div>
-                  <div class="card-body">
-                    <p class="text-gray">Real-time data accross all the active orders </p>
-                    <div class="chart-holder">
-                      <canvas id="lineChart1" style="max-height: 14rem !important;" class="w-100"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-5 mb-4 mb-lg-0 pl-lg-0">
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="row align-items-center flex-row">
-                      <div class="col-lg-5">
-                        <h2 class="mb-0 d-flex align-items-center"><span>60%</span><span class="dot bg-green d-inline-block ml-3"></span></h2><span class="text-muted text-uppercase small">Improvement</span>
-                        <hr><small class="text-muted"> In environmental perfomance the last month</small>
-                      </div>
-                      <div class="col-lg-7">
-                        <canvas id="pieChartHome1"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row align-items-center flex-row">
-                      <div class="col-lg-5">
-                        <h2 class="mb-0 d-flex align-items-center"><span>20%</span><span class="dot bg-violet d-inline-block ml-3"></span></h2><span class="text-muted text-uppercase small">Less water</span>
-                        <hr><small class="text-muted">Was used during the production processes</small>
-                      </div>
-                      <div class="col-lg-7">
-                        <canvas id="pieChartHome2"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-5 mb-4 mb-lg-0">
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="row align-items-center mb-3 flex-row">
-                      <div class="col-lg-5">
-                        <h2 class="mb-0 d-flex align-items-center"><span>10%</span><span class="dot bg-violet d-inline-block ml-3"></span></h2><span class="text-muted text-uppercase small">Less CO2</span>
-                        <hr><small class="text-muted">Was released during the production processes</small>
-                      </div>
-                      <div class="col-lg-7">
-                        <canvas id="pieChartHome3"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row align-items-center flex-row">
-                      <div class="col-lg-5">
-                        <h2 class="mb-0 d-flex align-items-center"><span>20%</span><span class="dot bg-green d-inline-block ml-3"></span></h2><span class="text-muted text-uppercase small">Potential Improvement</span>
-                        <hr><small class="text-muted">For the next decade due to increase of recycling</small>
-                      </div>
-                      <div class="col-lg-7">
-                        <canvas id="pieChartHome4"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-7">
-                <div class="card">
-                  <div class="card-header">
-                    <h2 class="h6 text-uppercase mb-0">Current Water Usage</h2>
-                  </div>
-                  <div class="card-body">
-                    <p class="text-gray">Real-time data accross all the active orders.</p>
-                    <div class="chart-holder">
-                      <canvas id="lineChart2" style="max-height: 14rem !important;" class="w-100"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="py-5">
-            <div class="row text-dark">
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <div class="card rounded credit-card bg-hover-gradient-violet">
-                  <div class="content d-flex flex-column justify-content-between p-4">
-                    <h1 class="mb-5"><i class="fas fa-shuttle-van"></i></h1>
-                    <div class="d-flex justify-content-between align-items-end pt-3">
-                      <div class="text-uppercase">
-                        <div class="font-weight-bold d-block">CO2</div><small class="text-gray">Order with least CO2 released</small>
-                      </div>
-                      <h5 class="mb-0">#03486</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <div class="card rounded credit-card bg-hover-gradient-blue">
-                  <div class="content d-flex flex-column justify-content-between p-4">
-                    <h1 class="mb-5"><i class="fas fa-tint"></i></h1>
-                    <div class="d-flex justify-content-between align-items-end pt-3">
-                      <div class="text-uppercase">
-                        <div class="font-weight-bold d-block">Water</div><small class="text-gray">Order with least H2O used</small>
-                      </div>
-                      <h5 class="mb-0">#03949</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <div class="card rounded credit-card bg-hover-gradient-green">
-                  <div class="content d-flex flex-column justify-content-between p-4">
-                    <h1 class="mb-5"><i class="fas fa-recycle"></i></h1>
-                    <div class="d-flex justify-content-between align-items-end pt-3">
-                      <div class="text-uppercase">
-                        <div class="font-weight-bold d-block">Recycling</div><small class="text-gray">Order with highest recycling rate</small>
-                      </div>
-                      <h5 class="mb-0">#04848</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
+
+
           <section>
             <div class="row">
               <div class="col-lg-8">
@@ -291,7 +186,7 @@
                       <div class="left d-flex align-items-center">
                         <div class="icon icon-lg shadow mr-3 text-gray"><i> <img style="height:25px"src="https://cdn4.iconfinder.com/data/icons/sewing-line-2/48/84-512.png"></i></div>
                         <div class="text">
-                          <h6 class="mb-0 d-flex align-items-center"> <span>Tier 1</span><span class="dot dot-sm ml-2 bg-violet"></span></h6><small class="text-gray">Supplier1, Supplier2</small>
+                          <h6 class="mb-0 d-flex align-items-center"> <span>Tier 1</span><span class="dot dot-sm ml-2 bg-violet"></span></h6><small class="text-gray">Caesar Vance, Indra</small>
                         </div>
                       </div>
                       <div class="right ml-5 ml-sm-0 pl-3 pl-sm-0 text-violet">
@@ -302,7 +197,7 @@
                       <div class="left d-flex align-items-center">
                         <div class="icon icon-lg shadow mr-3 text-gray"><i><img style="height:20px"src="https://cdn4.iconfinder.com/data/icons/50-sewing-pixel-perfect-crisp-clean-minimal-style/32/fabric-roll2-512.png"></i></div>
                         <div class="text">
-                          <h6 class="mb-0 d-flex align-items-center"> <span>Tier 2</span><span class="dot dot-sm ml-2 bg-green"></span></h6><small class="text-gray">Supplier3</small>
+                          <h6 class="mb-0 d-flex align-items-center"> <span>Tier 2</span><span class="dot dot-sm ml-2 bg-green"></span></h6><small class="text-gray">Caldwell</small>
                         </div>
                       </div>
                       <div class="right ml-5 ml-sm-0 pl-3 pl-sm-0 text-green">
@@ -313,7 +208,7 @@
                       <div class="left d-flex align-items-center">
                         <div class="icon icon-lg shadow mr-3 text-gray"><i><img style="height:27px"src="https://cdn.iconscout.com/icon/premium/png-256-thumb/yarn-22-837562.png"></i></div>
                         <div class="text">
-                          <h6 class="mb-0 d-flex align-items-center"> <span>Tier 3</span><span class="dot dot-sm ml-2 bg-blue"></span></h6><small class="text-gray">Supplier4, Supplier5</small>
+                          <h6 class="mb-0 d-flex align-items-center"> <span>Tier 3</span><span class="dot dot-sm ml-2 bg-blue"></span></h6><small class="text-gray">Montarte, Yamamoto</small>
                         </div>
                       </div>
                       <div class="right ml-5 ml-sm-0 pl-3 pl-sm-0 text-red">
@@ -324,7 +219,7 @@
                       <div class="left d-flex align-items-center">
                         <div class="icon icon-lg shadow mr-3 text-gray"><i><img style="height:37px"src="https://cdn4.iconfinder.com/data/icons/cotton/5/Cotton-17-512.png"></i></div>
                         <div class="text">
-                          <h6 class="mb-0 d-flex align-items-center"> <span>Tier 4</span><span class="dot dot-sm ml-2 bg-red"></span></h6><small class="text-gray">Supplier6</small>
+                          <h6 class="mb-0 d-flex align-items-center"> <span>Tier 4</span><span class="dot dot-sm ml-2 bg-red"></span></h6><small class="text-gray">Jena Gaines</small>
                         </div>
                       </div>
                       <div class="right ml-5 ml-sm-0 pl-3 pl-sm-0 text-blue">
@@ -339,7 +234,7 @@
                   <div class="flex-grow-1 d-flex align-items-center">
                     <div class="dot mr-3 bg-violet"></div>
                     <div class="text">
-                      <h6 class="mb-0">Suppliers</h6><span class="text-gray">with optimized CO2 performance</span>
+                      <h6 class="mb-0">Rouge</h6><span class="text-gray">with optimized CO2 performance</span>
                     </div>
                   </div>
                   <div class="icon bg-violet text-white"><i class="fas fa-clipboard-check"></i></div>
@@ -348,7 +243,7 @@
                   <div class="flex-grow-1 d-flex align-items-center">
                     <div class="dot mr-3 bg-green"></div>
                     <div class="text">
-                      <h6 class="mb-0">Suppliers</h6><span class="text-gray">with optimized recycling performance</span>
+                      <h6 class="mb-0">Indra</h6><span class="text-gray">with optimized recycling performance</span>
                     </div>
                   </div>
                   <div class="icon bg-green text-white"><i class="fas fa-recycle"></i></div>
@@ -357,13 +252,13 @@
                   <div class="flex-grow-1 d-flex align-items-center">
                     <div class="dot mr-3 bg-blue"></div>
                     <div class="text">
-                      <h6 class="mb-0">Suppliers</h6><span class="text-gray">with optimized H2O performance</span>
+                      <h6 class="mb-0">Cotton Kingdom</h6><span class="text-gray">with optimized H2O performance</span>
                     </div>
                   </div>
                   <div class="icon bg-blue text-white"><i class="fas fa-tint"></i></div>
                 </div>
                 <div class="card px-5 py-4">
-                  <h2 class="mb-0 d-flex align-items-center"><span><h6>Warning</h6> 5%</span><span class="dot bg-red d-inline-block ml-3"></span></h2><span class="text-muted">More energy used with Supplier2</span>
+                  <h2 class="mb-0 d-flex align-items-center"><span><h6>Warning</h6> 5%</span><span class="dot bg-red d-inline-block ml-3"></span></h2><span class="text-muted">More energy used with Timmoty money</span>
                   <div class="chart-holder">
                     <canvas id="lineChart3" style="max-height: 7rem !important;" class="w-100"> </canvas>
                   </div>
@@ -376,7 +271,7 @@
               <div class="col-lg-12"><a href="#" class="message card px-5 py-3 mb-4 bg-hover-gradient-primary no-anchor-style">
                   <div class="row">
                     <div class="col-lg-3 d-flex align-items-center flex-column flex-lg-row text-center text-md-left"><strong class="h5 mb-0">240<sup class="smaller text-gray font-weight-normal"> Garments per day</sup></strong><img src="https://i.pinimg.com/236x/30/14/e3/3014e372446f067d40dc9b25acb85f25--textile-branding-textile-logo.jpg" alt="..." style="max-width: 3rem" class="rounded-circle mx-3 my-2 my-lg-0">
-                      <h6 class="mb-0">Supplier1</h6>
+                      <h6 class="mb-0">ATB</h6>
                     </div>
                     <div class="col-lg-9 d-flex align-items-center flex-column flex-lg-row text-center text-md-left">
                       <div class="bg-gray-100 roundy px-4 py-1 mr-0 mr-lg-3 mt-2 mt-lg-0 text-dark exclode"><b>Tier1</b> Cutting, Sewing, Lebeling</div>
@@ -386,7 +281,7 @@
               <div class="col-lg-12"><a href="#" class="message card px-5 py-3 mb-4 bg-hover-gradient-primary no-anchor-style">
                   <div class="row">
                     <div class="col-lg-3 d-flex align-items-center flex-column flex-lg-row text-center text-md-left"><strong class="h5 mb-0">2000<sup class="smaller text-gray font-weight-normal"> Fabric rolls per day</sup></strong><img src="https://www.packetfabric.com/assets/images/logo/packetfabric-logo-vertical-lockup.jpg" alt="..." style="max-width: 3rem" class="rounded-circle mx-3 my-2 my-lg-0">
-                      <h6 class="mb-0">Supplier2</h6>
+                      <h6 class="mb-0">VirtaZi</h6>
                     </div>
                     <div class="col-lg-9 d-flex align-items-center flex-column flex-lg-row text-center text-md-left">
                       <div class="bg-gray-100 roundy px-4 py-1 mr-0 mr-lg-3 mt-2 mt-lg-0 text-dark exclode"><b>Tier2</b> knitting, dying</div>
@@ -396,7 +291,7 @@
               <div class="col-lg-12"><a href="#" class="message card px-5 py-3 mb-4 bg-hover-gradient-primary no-anchor-style">
                   <div class="row">
                     <div class="col-lg-3 d-flex align-items-center flex-column flex-lg-row text-center text-md-left"><strong class="h5 mb-0">1700<sup class="smaller text-gray font-weight-normal"> Fabric rolls per day</sup></strong><img src="http://www.graphis.com/media/uploads/cache/ed/c1/edc1d65d02974f984164512440c93672.jpg" alt="..." style="max-width: 3rem" class="rounded-circle mx-3 my-2 my-lg-0">
-                      <h6 class="mb-0">Supplier3</h6>
+                      <h6 class="mb-0">Lighty</h6>
                     </div>
                     <div class="col-lg-9 d-flex align-items-center flex-column flex-lg-row text-center text-md-left">
                       <div class="bg-gray-100 roundy px-4 py-1 mr-0 mr-lg-3 mt-2 mt-lg-0 text-dark exclode"><b>Tier2</b> knitting, dying</div>
@@ -406,7 +301,7 @@
               <div class="col-lg-12"><a href="#" class="message card px-5 py-3 mb-4 bg-hover-gradient-primary no-anchor-style">
                   <div class="row">
                     <div class="col-lg-3 d-flex align-items-center flex-column flex-lg-row text-center text-md-left"><strong class="h5 mb-0">300<sup class="smaller text-gray font-weight-normal"> garments per day</sup></strong><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdDbbOxj4kRYiuAbfL9DquAsioLQpMWhDiLqnvJ0ehYaICVD8-_w" alt="..." style="max-width: 3rem" class="rounded-circle mx-3 my-2 my-lg-0">
-                      <h6 class="mb-0">Supplier4</h6>
+                      <h6 class="mb-0">Cottome</h6>
                     </div>
                     <div class="col-lg-9 d-flex align-items-center flex-column flex-lg-row text-center text-md-left">
                       <div class="bg-gray-100 roundy px-4 py-1 mr-0 mr-lg-3 mt-2 mt-lg-0 text-dark exclode"><b>Teir1</b> Sewing, Cutting, Lebeling, Packging</div>
@@ -415,39 +310,43 @@
                   </div></a></div>
             </div>
           </section>
-        </div>
-        <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-6 text-center text-md-left text-primary">
-                <p class="mb-2 mb-md-0">Triwool | Trust and Trace &copy; 2019-2020</p>
+
+
+
+
+
+
+
+                </div>
               </div>
-              <div class="col-md-6 text-center text-md-right text-gray-400">
-                <p class="mb-0">Design by <a href="https://" class="external text-gray-400">Sugar </a></p>
 
-            </div>
+
+
+            <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6 text-center text-md-left text-primary">
+                    <p class="mb-2 mb-md-0">Triwool | Trust and Trace &copy; 2019-2020</p>
+                  </div>
+                  <div class="col-md-6 text-center text-md-right text-gray-400">
+                    <p class="mb-0">Design by <a href="https://" class="external text-gray-400">Sugar </a></p>
+
+                </div>
+              </div>
+            </footer>
           </div>
-        </footer>
-      </div>
-    </div>
+        </div>
 
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
-    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-    <script src="../js/map.js"></script>
-    <div id="chartdiv"></div>
 
     <!-- JavaScript files-->
-
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper.js/umd/popper.min.js"> </script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script src="js/charts-home.js"></script>
+    <script src="js/charts-custom.js"></script>
     <script src="js/front.js"></script>
+    <script src="js/charts-home.js"></script>
   </body>
 </html>
